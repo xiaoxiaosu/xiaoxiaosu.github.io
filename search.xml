@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[设计模式之——装饰器模式]]></title>
+    <url>%2F2019%2F05%2F13%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E2%80%94%E2%80%94%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[装饰器模式是一种用于代替继承的技术，无需通过继承增加子类就能扩展对象的新功能。使用对象的关联关系代替继承关系，更加灵活，同时避免类型体系的快速膨胀。&lt; !–more–&gt; 示例代码123456789101112131415161718192021222324252627282930313233343536373839404142434445&lt;?phpabstract class Car&#123; public abstract function run();&#125;abstract class DerectoreBase extends Car&#123; protected $car; public function __construct(Car $car) &#123; $this-&gt;car = $car; &#125;&#125;class ColorDerector extends DerectoreBase&#123; public function run() &#123; echo "颜色\n"; $this-&gt;car-&gt;run(); &#125;&#125;class SpeedDerector extends DerectoreBase&#123; public function run() &#123; echo "速度\n"; $this-&gt;car-&gt;run(); &#125;&#125;class Benz extends Car&#123; public function run() &#123; echo "This is Benz"; &#125;&#125;$tmp = new ColorDerector(new SpeedDerector(new Benz()));$tmp-&gt;run(); 在上面的代码中，我们首先定义了一个基类，并且有一个run的抽象方法，其他类都继承于该类。然后创建了一个装饰器的基类，该类中有一个car的属性，用于保存被修饰的对象。接着我们创建了两个具体的装饰类用于实现具体的装饰功能然后我们创建了一个奔驰类继承了汽车基类此时我们通过实例化装饰类并且把奔驰类作为参数传入就可以实现装饰功能，以及多级装饰功能。]]></content>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式之——组合模式]]></title>
+    <url>%2F2019%2F05%2F06%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E2%80%94%E2%80%94%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[设计模式之——工厂模式]]></title>
+    <url>%2F2019%2F04%2F30%2F%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E2%80%94%E2%80%94%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"></content>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我们的故事]]></title>
+    <url>%2F2019%2F04%2F10%2F%E6%88%91%E4%BB%AC%E7%9A%84%E6%95%85%E4%BA%8B%2F</url>
+    <content type="text"><![CDATA[一生两人三餐四季]]></content>
+      <tags>
+        <tag>爱情</tag>
+      </tags>
+  </entry>
+</search>

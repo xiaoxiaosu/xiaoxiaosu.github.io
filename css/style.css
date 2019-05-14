@@ -255,6 +255,13 @@ a:hover, a:active {
   font-size: 22px;
   margin: 0;
 }
+
+.post .post-title .top {
+  text-transform: uppercase;
+  color: #1C86EE;
+  font-size: 16;
+  margin: 0;
+}
 .post .post-title a {
   text-decoration: none;
   letter-spacing: 1px;
